@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Simple Chat</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="chat-container">
+      <!-- Header -->
+      <header>
+        <div>
+          <h2>Simple Chat</h2>
+
+          <p>
+            <span class="online"></span>
+            <span id="clientCount">0</span> clients online
+          </p>
+        </div>
+      </header>
+
+      <!-- Name -->
+      <div class="name-section">
+        <label for="nameInput">Your Name</label>
+
+        <input
+          type="text"
+          id="nameInput"
+          placeholder="Enter your name"
+          value="Chor"
+        />
+      </div>
+
+      <!-- Messages -->
+      <main class="messages"></main>
+
+      <!-- Message Input -->
+      <footer>
+        <input type="text" id="messageInput" placeholder="Type a message..." />
+
+        <button id="sendButton">Send</button>
+      </footer>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
